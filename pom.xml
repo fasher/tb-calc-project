@@ -118,10 +118,15 @@
                        <location>target/taboola_test-${project.version}.jar</location>
                        <destination>tbcalc.jar</destination>
                     </source>
+               </sources>
+              </mapping>
+              <mapping>
+                <directory>/usr/local/tbcalc/lib</directory>
+                <sources>
                     <source>
                        <location>target/lib</location>
                     </source>
-               </sources>
+                </sources>
               </mapping>
              </mappings>
           </configuration>
