@@ -7,6 +7,9 @@
     <groupId>taboola_test</groupId>
     <artifactId>taboola_test</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <scm>
+       <developerConnection>scm:git:ssh://git@github.com/fasher/tb-calc-project.git </developerConnection>
+    </scm>
 
     <dependencies>
         <dependency>
@@ -37,6 +40,9 @@
 
 
     </dependencies>
+    <properties>
+       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <build>
 
@@ -87,7 +93,43 @@
                 </executions>
             </plugin>
 
+        <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>rpm-maven-plugin</artifactId>
+        <version>2.1.5</version>
+        <executions>
+          <execution>
+            <id>generate-rpm</id>
+            <goals>
+              <goal>rpm</goal>
+            </goals>
+          </execution>
+        </executions>
+          <configuration>
+             <copyright>Dunno</copyright>
+             <group>Applications</group>
+             <description>Taboola Calculator</description>
+             <packager>Asher Frenkel</packager>
+             <mappings>
+               <mapping>
+                <directory>/usr/local/tbcalc</directory>
+                <username>root</username>
+                <sources>
+                    <source> 
+                       <location>target/taboola_test-${project.version}.jar</location>
+                       <destination>tbcalc.jar</destination>
+                    </source>
+                    <source>
+                       <location>target/lib</location>
+                    </source>
+               </sources>
+              </mapping>
+             </mappings>
+          </configuration>
+        </plugin>
         </plugins>
+                    
+
 
     </build>
 
