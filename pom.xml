@@ -136,5 +136,12 @@
 
 
     </build>
+    <distributionManagement> 
+       <repository>
+          <id>calcrepo</id>
+          <name>calc local repository</name>
+          <url>file:///vagrant/repo</url>
 
+       </repository>
+    </distributionManagement> 
 </project>
