@@ -4,10 +4,10 @@
 
     <groupId>taboola_test</groupId>
     <artifactId>taboola_test</artifactId>
-    <version>1.6</version>
+    <version>1.6-SNAPSHOT</version>
     <scm>
        <developerConnection>scm:git:ssh://git@github.com/fasher/tb-calc-project.git </developerConnection>
-      <tag>taboola_test-1.6</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <dependencies>
