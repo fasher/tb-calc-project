@@ -134,7 +134,7 @@
                 <filemode>0755</filemode>
                 <sources>
                     <source>
-                       <location>src/scripts/calc</location>
+                       <location>${project.basedir}/src/scripts/calc</location>
                     </source>
                 </sources>
               </mapping>
