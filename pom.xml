@@ -122,9 +122,19 @@
               </mapping>
               <mapping>
                 <directory>/usr/local/tbcalc/lib</directory>
+                <username>root</username>
                 <sources>
                     <source>
                        <location>target/lib</location>
+                    </source>
+                </sources>
+              </mapping>
+              <mapping>
+                <directory>/usr/local/bin</directory>
+                <filemode>0755</filemode>
+                <sources>
+                    <source>
+                       <location>src/scripts/calc</location>
                     </source>
                 </sources>
               </mapping>
